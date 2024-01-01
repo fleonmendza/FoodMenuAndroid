@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_signUp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".usecases.session.SignUpFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glRStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glREnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Registrate"
+        android:textSize="30dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvRName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:hint="Nombre"
+        app:layout_constraintEnd_toEndOf="@+id/glREnd"
+        app:layout_constraintStart_toStartOf="@+id/glRStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ipRName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textCapWords" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvRLastName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Apellidos"
+        app:layout_constraintEnd_toEndOf="@+id/glREnd"
+        app:layout_constraintStart_toStartOf="@+id/glRStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvRName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ipRLastName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textCapWords" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvREmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Correo"
+        app:layout_constraintEnd_toEndOf="@+id/glREnd"
+        app:layout_constraintStart_toStartOf="@+id/glRStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvRLastName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ipREmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvRPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Contrasena"
+        app:endIconDrawable="@drawable/icon_pass"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="@+id/glREnd"
+        app:layout_constraintStart_toStartOf="@+id/glRStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvREmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ipRPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tvRSexo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Sexo:"
+        app:layout_constraintStart_toStartOf="@+id/glRStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvRPassword" />
+
+
+    <RadioGroup
+        android:id="@+id/rgRSex"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/glREnd"
+        app:layout_constraintStart_toStartOf="@id/glRStart"
+        app:layout_constraintTop_toBottomOf="@id/tvRSexo">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbRHombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="Hombre" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbRMujer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="Mujer" />
+
+
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvRAge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Edad:"
+        app:layout_constraintEnd_toEndOf="@+id/glREnd"
+        app:layout_constraintStart_toStartOf="@+id/glRStart"
+        app:layout_constraintTop_toBottomOf="@+id/rgRSex">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ipRAge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:maxLength="2"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/btRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRAge" />
+
+    <FrameLayout
+        android:id="@+id/flProgressBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#80000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/recomend"
+        android:icon="@drawable/baseline_auto_awesome_24"
+        android:title="Recomendado" />
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/baseline_search_24"
+        android:title="Buscar" />
+
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/baseline_favorite_24"
+        android:title="Favoritos" />
+    <item
+        android:id="@+id/usuario"
+        android:icon="@drawable/baseline_person_24"
+        android:title="Perfil" />
+</menu>
